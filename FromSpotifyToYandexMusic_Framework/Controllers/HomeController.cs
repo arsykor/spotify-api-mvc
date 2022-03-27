@@ -11,28 +11,10 @@ namespace FromSpotifyToYandexMusic_Framework.Controllers
 {
     public class HomeController : Controller
     {
-        public string Index()
+        public ActionResult Index()
         {
-            string tracksFromFile = LoadJson();
-            string resp = "chech the app";
-
-            //List<Track> Tracks = JsonConvert.DeserializeObject<List<Track>>(tracksFromFile);
-
-            var welcome = Welcome.FromJson(tracksFromFile);
-
-            int b = 1 + 1;
-
-            return resp;
+            return View();
         }
-
-        //public ActionResult Index()
-        //{
-        //    string tracksFromFile = LoadJson();
-
-        //    List<Track> TasksList = JsonConvert.DeserializeObject<List<Track>>(tracksFromFile);
-
-        //    return View();
-        //}
 
         public ActionResult About()
         {
